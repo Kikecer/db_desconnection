@@ -4,13 +4,6 @@ import dotenv from "dotenv";
 import { pool } from './Db.js';
 
 
-await pool.query(`
-    CREATE TABLE IF NOT EXISTS movie(id int auto_increment primary key,
-    title varchar(250) NOT NULL,
-    year int NOT NULL,
-    genre varchar(250) NOT NULL)
-    `);
-
 
 const PORT = process.env.PORT || 3000;
 const app = express();
